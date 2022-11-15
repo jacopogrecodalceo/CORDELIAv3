@@ -157,6 +157,8 @@ def convert_instr_params(line):
 
 def Complex(mood):
 
+	complex_list = []
+
 	lines = mood.splitlines()
 
 	inside_adds = []
@@ -236,6 +238,7 @@ endif
 
 			preroute = "\n".join(route_lines)	
 			
-			this_dict = {'INSTR': preinstr, 'ROUTE': preroute}		
+			complex_list.append({'INSTR': preinstr, 'ROUTE': preroute})
 
-	return this_dict
+
+	return complex_list

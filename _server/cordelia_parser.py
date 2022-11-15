@@ -34,7 +34,8 @@ class Parser:
 
 					ref_id = 'MOOD_COMPLEX'
 					if token['id'] == ref_id:
-						self.moods[ref_id].append(Complex(token['score']))
+						for each in Complex(token['score']):
+							self.moods[ref_id].append(each)
 			
 				except Exception as e:
 					print(e)	
