@@ -1,0 +1,34 @@
+\documentclass[a4paper, landscape]{book}
+\usepackage[margin=15mm]{geometry}
+\usepackage{multicol}
+\setlength{\columnseprule}{1.25pt}
+\pagenumbering{gobble}
+
+\begin{document}
+\begin{multicols}{3}
+\centering
+\section*{INSTRs}
+
+\begin{tabular}{ c|c } 
+---INSTRs---
+\end{tabular}
+\columnbreak
+
+\centering
+\section*{SAMPs}
+
+\begin{tabular}{ c|c } 
+---SAMPs---
+\end{tabular}
+\columnbreak
+
+\centering
+\section*{DIRs}
+
+\begin{tabular}{ c|c } 
+---DIRs---
+\end{tabular}
+\columnbreak
+
+\end{multicols}
+\end{document}

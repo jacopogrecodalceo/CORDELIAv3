@@ -1,0 +1,35 @@
+@gkpulse	almost 95
+
+eu: 5, 16, 64, "heart", 2
+	r8@grind
+	gkbeats*cunt(6, 35, 0)
+	$ff
+	gieclassic$atk(5)
+	step("1C", giminor3, once(fillarray(0, 1, random:k(4, 10), 7, 3)))
+	step("0F", giminor3, once(fillarray(4, 1, random:k(4, 10), 7, 3)))
+	step("2B", giminor3, once(fillarray(0, 1, random:k(4, 10), 7, 2)))
+
+eu: 8, 16, 24, "heart", 2
+	-r8@cascadexp@sunij
+	gkbeats*cunt(12, 8, 0)
+	$fff
+	gieclassic$atk(5)
+	step("3C", giminor3, once(fillarray(0, random:k(4, 10), 7, 3)))
+	step("3F", giminor3, once(fillarray(0, 1, random:k(4, 10), 7, 3)))
+	step("2B", giminor3, once(fillarray(0, 1, random:k(4, 10), 7, 2)))
+
+@;use leo, too
+
+eu: 3, 16, 12, "heart"
+	r8@sufij2@valle.abj(lfh(6))
+	gkbeats*8
+	$ff
+	$once(giclassic, gieclassic, gired)$atk(5)
+	step("4B", giminor3, once(fillarray(0, 1, random:k(4, 10), 7, 2)))
+
+eu: 8, 16, 24, "heart"
+	r4@alonefr
+	gkbeats*cunt(4, 35, 0)
+	$f
+	gieclassic$atk(5)
+	step("0B", giminor3, once(fillarray(0, 1, random:k(4, 10), 7, 2)))

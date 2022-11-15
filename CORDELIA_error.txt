@@ -1,0 +1,4 @@
+Python(21364,0x70000b6f1000) malloc: Incorrect checksum for freed object 0x7fb60f37b070: probably modified after being freed.
+Corrupt value: 0x0
+Python(21364,0x70000b6f1000) malloc: *** set a breakpoint in malloc_error_break to debug
+backtrace() returned 9 addresses

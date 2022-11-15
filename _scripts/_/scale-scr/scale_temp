@@ -1,0 +1,45 @@
+\header {
+title = "---TITLE---"
+composer = "jacopo greco d'alceo"
+tagline = ""
+}
+
+\score {
+
+\new Staff {
+\tempo 4 = 120
+\set Score.tempoHideNote = ##t
+\fixed c' {
+---MODE---
+}
+}
+
+\layout {
+\context {
+\Staff
+\remove "Time_signature_engraver"
+}
+\context {
+\Score
+\omit BarNumber
+}
+\context {
+\Score
+forbidBreakBetweenBarLines = ##f
+}
+}
+\midi {}
+}
+
+\paper {
+indent = 0\mm
+line-width = 250\mm
+% offset the left padding, also add 1mm as lilypond creates cropped
+% images with a little space on the right
+line-width = #(- line-width (* mm  5.000000) (* mm 1))
+line-width = 250\mm - 2.0 * 10.16\mm
+% offset the left padding, also add 1mm as lilypond creates cropped
+% images with a little space on the right
+line-width = #(- line-width (* mm  5.000000) (* mm 1))
+ragged-right = ##t
+}

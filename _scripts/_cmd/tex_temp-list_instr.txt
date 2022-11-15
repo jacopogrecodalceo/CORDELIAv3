@@ -1,0 +1,55 @@
+\documentclass[a4paper]{book}
+\usepackage[margin=9.5mm]{geometry}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{array}
+%\usepackage{tgbonum}
+\setlength{\columnseprule}{1.5pt}
+\pagenumbering{gobble}
+
+\begin{document}
+
+    \begin{multicols}{3}
+
+        \null\vfill
+        \begin{table}[H]
+            \tiny
+            \begin{tabular}{c|>{\em}l}
+                INSTRs, ---INSTRs_LEN--- &
+                \begin{tabular}[c]{@{}p{.065\textwidth}l@{}}
+                ---INSTRs---
+                \end{tabular}
+            \end{tabular}
+        \end{table}
+        \vfill\null
+        \columnbreak
+
+        \null\vfill
+        \begin{table}[H]
+            \tiny
+            \begin{tabular}{c|>{\em}l}
+                SAMPs, ---SAMPs_LEN--- &
+                \begin{tabular}[c]{@{}p{.065\textwidth}l@{}}
+                ---SAMPs---
+                \end{tabular}
+            \end{tabular}
+        \end{table}
+        \vfill\null
+        \columnbreak
+
+        \null\vfill
+        \begin{table}[H]
+            \tiny
+            \begin{tabular}{c|>{\em}l}
+                DIRs, ---DIRs_LEN--- &
+                \begin{tabular}[c]{@{}p{.065\textwidth}l@{}}
+                ---DIRs---
+                \end{tabular}
+            \end{tabular}
+        \end{table}
+        \vfill\null
+        \columnbreak
+    
+    \end{multicols}
+
+\end{document}

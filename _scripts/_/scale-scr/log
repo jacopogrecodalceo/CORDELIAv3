@@ -1,0 +1,188 @@
+\time 4/4
+c^"3semitone" _"3" ees_"3" fis_"3" a_""\break
+\time 3/4
+c^"4semitone" _"4" e_"4" aes_""\break
+\time 7/4
+c^"aeolian" _"2" d_"1" ees_"2" f_"2" g_"1" aes_"2" bes_""\break
+\time 7/4
+c^"algerian" _"2" d_"1" ees_"3" fis_"1" g_"1" aes_"3" b_""\break
+\time 7/4
+c^"algerian1" _"2" d_"1" ees_"3" fis_"1" g_"1" aes_"3" b_""\break
+\time 7/4
+c^"algerian2" _"2" d_"1" ees_"2" f_"2" g_"1" aes_"2" bes_""\break
+\time 7/4
+c^"altered" _"1" cis_"2" ees_"1" e_"2" fis_"2" aes_"2" bes_""\break
+\time 7/4
+c^"arabian" _"1" cis_"3" e_"1" f_"2" g_"1" aes_"3" b_""\break
+\time 6/4
+c^"augmented" _"3" ees_"1" e_"3" g_"1" aes_"3" b_""\break
+\time 5/4
+c^"balinese" _"1" cis_"2" ees_"4" g_"1" aes_""\break
+\time 8/4
+c^"bebopdominant" _"2" d_"2" e_"1" f_"2" g_"2" a_"1" bes_"1" b_""\break
+\time 8/4
+c^"bebopdominantflatnine" _"1" cis_"3" e_"1" f_"2" g_"2" a_"1" bes_"1" b_""\break
+\time 8/4
+c^"bebopmajor" _"2" d_"2" e_"1" f_"2" g_"1" aes_"1" a_"2" b_""\break
+\time 8/4
+c^"bebopminor" _"2" d_"1" ees_"2" f_"2" g_"1" aes_"1" a_"1" bes_""\break
+\time 8/4
+c^"beboptonicminor" _"2" d_"1" ees_"2" f_"2" g_"1" aes_"1" a_"2" b_""\break
+\time 6/4
+c^"blues" _"3" ees_"2" f_"1" fis_"1" g_"3" bes_""\break
+\time 7/4
+c^"byzantine" _"1" cis_"3" e_"1" f_"2" g_"1" aes_"3" b_""\break
+\time 7/4
+c^"chahargah" _"1" cis_"3" e_"1" f_"2" g_"1" aes_"3" b_""\break
+\time 5/4
+c^"chinese" _"2" d_"2" e_"3" g_"2" a_""\break
+\time 5/4
+c^"chinese2" _"4" e_"2" fis_"1" g_"4" b_""\break
+\time 4/4
+c^"dim" _"3" ees_"3" fis_"3" a_""\break
+\time 8/4
+c^"diminished" _"2" d_"1" ees_"2" f_"1" fis_"2" aes_"1" a_"2" b_""\break
+\time 7/4
+c^"dorian" _"2" d_"1" ees_"2" f_"2" g_"2" a_"1" bes_""\break
+\time 7/4
+c^"doubleharmonic" _"1" cis_"3" e_"1" f_"2" g_"1" aes_"3" b_""\break
+\time 7/4
+c^"egyptian" _"2" d_"1" ees_"3" fis_"1" g_"1" aes_"3" b_""\break
+\time 7/4
+c^"enigmatic" _"1" cis_"3" e_"2" fis_"2" aes_"2" bes_"1" b_""\break
+\time 7/4
+c^"ethiopian" _"2" d_"2" e_"1" f_"2" g_"1" aes_"3" b_""\break
+\time 8/4
+c^"flamenco" _"1" cis_"2" ees_"1" e_"1" f_"2" g_"1" aes_"2" bes_""\break
+\time 7/4
+c^"gypsy" _"1" cis_"3" e_"1" f_"2" g_"1" aes_"3" b_""\break
+\time 7/4
+c^"harmonic" _"2" d_"2" e_"1" f_"2" g_"2" a_"2" b_""\break
+\time 7/4
+c^"harmonicmajor" _"2" d_"2" e_"1" f_"3" aes_"1" a_"2" b_""\break
+\time 7/4
+c^"harmonicminor" _"2" d_"1" ees_"2" f_"2" g_"1" aes_"3" b_""\break
+\time 7/4
+c^"hindu" _"2" d_"2" e_"1" f_"2" g_"1" aes_"2" bes_""\break
+\time 5/4
+c^"hirajoshi" _"2" d_"1" ees_"4" g_"1" aes_""\break
+\time 7/4
+c^"hungariangypsy" _"2" d_"1" ees_"3" fis_"1" g_"1" aes_"3" b_""\break
+\time 7/4
+c^"hungarianmajor" _"3" ees_"1" e_"2" fis_"1" g_"2" a_"1" bes_""\break
+\time 7/4
+c^"hungarianminor" _"2" d_"1" ees_"3" fis_"1" g_"1" aes_"3" b_""\break
+\time 7/4
+c^"indian" _"1" cis_"2" ees_"1" e_"3" g_"1" aes_"2" bes_""\break
+\time 8/4
+c^"inverteddiminished" _"1" cis_"2" ees_"1" e_"2" fis_"1" g_"2" a_"1" bes_""\break
+\time 7/4
+c^"ionian" _"2" d_"2" e_"1" f_"2" g_"2" a_"2" b_""\break
+\time 5/4
+c^"iwato" _"1" cis_"4" f_"1" fis_"4" bes_""\break
+\time 5/4
+c^"japanese" _"1" cis_"4" f_"2" g_"1" aes_""\break
+\time 7/4
+c^"javanese" _"1" cis_"2" ees_"2" f_"2" g_"2" a_"1" bes_""\break
+\time 7/4
+c^"jewish" _"1" cis_"3" e_"1" f_"2" g_"1" aes_"2" bes_""\break
+\time 5/4
+c^"kumoi" _"1" cis_"4" f_"2" g_"1" aes_""\break
+\time 7/4
+c^"leadingwholetone" _"2" d_"2" e_"2" fis_"2" aes_"2" bes_"1" b_""\break
+\time 7/4
+c^"locrian" _"1" cis_"2" ees_"2" f_"1" fis_"2" aes_"2" bes_""\break
+\time 7/4
+c^"locrianmajor" _"2" d_"2" e_"1" f_"1" fis_"2" aes_"2" bes_""\break
+\time 7/4
+c^"locriannatural" _"2" d_"1" ees_"2" f_"1" fis_"2" aes_"2" bes_""\break
+\time 7/4
+c^"locriansuper" _"1" cis_"2" ees_"1" e_"2" fis_"2" aes_"2" bes_""\break
+\time 7/4
+c^"locrianultra" _"1" cis_"2" ees_"1" e_"2" fis_"2" aes_"1" a_""\break
+\time 7/4
+c^"lydian" _"2" d_"2" e_"2" fis_"1" g_"2" a_"2" b_""\break
+\time 7/4
+c^"lydianaugmented" _"2" d_"2" e_"2" fis_"2" aes_"1" a_"1" bes_""\break
+\time 7/4
+c^"lydiandominant" _"2" d_"2" e_"2" fis_"1" g_"2" a_"1" bes_""\break
+\time 7/4
+c^"lydianminor" _"2" d_"2" e_"2" fis_"1" g_"1" aes_"2" bes_""\break
+\time 7/4
+c^"major" _"2" d_"2" e_"1" f_"2" g_"2" a_"2" b_""\break
+\time 7/4
+c^"marva" _"1" cis_"3" e_"2" fis_"1" g_"2" a_"2" b_""\break
+\time 7/4
+c^"melodicminor" _"2" d_"1" ees_"2" f_"2" g_"2" a_"2" b_""\break
+\time 7/4
+c^"melodicminorascending" _"2" d_"1" ees_"2" f_"2" g_"2" a_"2" b_""\break
+\time 7/4
+c^"melodicminordescending" _"2" d_"1" ees_"2" f_"2" g_"1" aes_"2" bes_""\break
+\time 7/4
+c^"minor" _"2" d_"1" ees_"2" f_"2" g_"1" aes_"2" bes_""\break
+\time 7/4
+c^"minor3" _"2" d_"0" d_"3" f_"2" g_"1" aes_"2" bes_""\break
+\time 7/4
+c^"mjnor" _"1" cis_"1" d_"3" f_"2" g_"1" aes_"2" bes_""\break
+\time 7/4
+c^"minor2v5" _"2" d_"0" d_"3" f_"2" g_"1" aes_"2" bes_""\break
+\time 7/4
+c^"mixolydian" _"2" d_"2" e_"1" f_"2" g_"2" a_"1" bes_""\break
+\time 7/4
+c^"mixolydianaugmented" _"2" d_"2" e_"1" f_"3" aes_"1" a_"1" bes_""\break
+\time 7/4
+c^"mohammedan" _"2" d_"1" ees_"2" f_"2" g_"1" aes_"3" b_""\break
+\time 5/4
+c^"mongolian" _"2" d_"2" e_"3" g_"2" a_""\break
+\time 7/4
+c^"naturalminor" _"2" d_"1" ees_"2" f_"2" g_"1" aes_"2" bes_""\break
+\time 7/4
+c^"neapolitanmajor" _"1" cis_"2" ees_"2" f_"2" g_"2" a_"2" b_""\break
+\time 7/4
+c^"neapolitanminor" _"1" cis_"2" ees_"2" f_"2" g_"1" aes_"3" b_""\break
+\time 8/4
+c^"octa1" _"1" cis_"2" ees_"1" e_"2" fis_"1" g_"2" a_"1" bes_""\break
+\time 8/4
+c^"octa2" _"2" d_"1" ees_"2" f_"1" fis_"2" aes_"1" a_"2" b_""\break
+\time 7/4
+c^"oriental" _"1" cis_"3" e_"1" f_"1" fis_"3" a_"1" bes_""\break
+\time 7/4
+c^"overtone" _"2" d_"2" e_"2" fis_"1" g_"2" a_"1" bes_""\break
+\time 5/4
+c^"pa" _"2" d_"1" ees_"4" g_"1" aes_""\break
+\time 5/4
+c^"pb" _"1" cis_"2" ees_"3" fis_"2" aes_""\break
+\time 5/4
+c^"pd" _"2" d_"1" ees_"4" g_"2" a_""\break
+\time 5/4
+c^"pe" _"1" cis_"2" ees_"4" g_"1" aes_""\break
+\time 5/4
+c^"pelog" _"1" cis_"2" ees_"4" g_"3" bes_""\break
+\time 5/4
+c^"pentamaj" _"2" d_"2" e_"3" g_"2" a_""\break
+\time 5/4
+c^"pentamin" _"3" ees_"2" f_"2" g_"3" bes_""\break
+\time 5/4
+c^"pentatonicmajor" _"2" d_"2" e_"3" g_"2" a_""\break
+\time 5/4
+c^"pentatonicminor" _"3" ees_"2" f_"2" g_"3" bes_""\break
+\time 7/4
+c^"persian" _"1" cis_"3" e_"1" f_"1" fis_"2" aes_"3" b_""\break
+\time 5/4
+c^"pfcg" _"2" d_"2" e_"3" g_"2" a_""\break
+\time 7/4
+c^"phryan" _"1" cis_"2" ees_"2" f_"2" g_"1" aes_"2" bes_""\break
+\time 7/4
+c^"phryanmajor" _"1" cis_"3" e_"1" f_"2" g_"1" aes_"2" bes_""\break
+\time 7/4
+c^"romanian" _"2" d_"1" ees_"3" fis_"1" g_"2" a_"1" bes_""\break
+\time 7/4
+c^"spanish" _"1" cis_"3" e_"1" f_"2" g_"1" aes_"2" bes_""\break
+\time 8/4
+c^"spanish8tone" _"1" cis_"2" ees_"1" e_"1" f_"1" fis_"2" aes_"2" bes_""\break
+\time 8/4
+c^"symmetrical" _"1" cis_"2" ees_"1" e_"2" fis_"1" g_"2" a_"1" bes_""\break
+\time 7/4
+c^"todi" _"1" cis_"2" ees_"3" fis_"1" g_"1" aes_"3" b_""\break
+\time 6/4
+c^"whole" _"2" d_"2" e_"2" fis_"2" aes_"2" bes_""\break
