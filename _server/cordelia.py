@@ -53,6 +53,7 @@ def UDP_receive():
 				parser.parse(direction, lexer.tokens)
 				wrapper.wrap(direction, parser.out)
 				for each in wrapper.out:
+					pass
 					print(each)
 					cs.compileOrcAsync(each)
 					
@@ -89,3 +90,7 @@ if __name__ == '__main__':
 		cs.cleanup()
 		print('CSOUND is OFF!')
 
+""" if __name__ == '__main__':
+	
+	t = Thread(target=UDP_receive)
+	t.start() """

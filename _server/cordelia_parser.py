@@ -8,7 +8,7 @@ class Parser:
 		self.moods		= {
 			'MOOD_STRICT': [],
 			'MOOD_WHIMSY': [],
-			'MOOD_COMPLEX': []
+			'MOOD_COMPLEX': [],
 		}
 		self.INSTR = []
 		self.ROUTE = []
@@ -55,6 +55,40 @@ class Parser:
 
 			self.out = {'INSTR': list(dict.fromkeys(self.INSTR)), 'ROUTE': list(dict.fromkeys(self.ROUTE))}
 		
+
+
+
+		elif self.direction == 'CORDELIA_from_REAPER':
+
+			reaper_moods = {}
+			for token in self.tokens:
+				if type(token) is dict:
+					try:
+						ref_id = 'MOOD_STRICT'
+						if token['id'] == ref_id:
+							reaper_moods = token | Strict(token['score'])
+
+						ref_id = 'MOOD_WHIMSY'
+						if token['id'] == ref_id:
+							reaper_moods = token | Strict(token['score'])
+
+						ref_id = 'MOOD_COMPLEX'
+						if token['id'] == ref_id:
+							for each in Complex(token['score']):
+								reaper_moods = token | each
+				
+					except Exception as e:
+						print('Exception in parsing:')
+						print(e)	
+
+				elif re.match(r"^kill", token):
+					reaper_moods = {'id': 'MOOD_KILL', 'INSTR': token}
+
+			#print(reaper_moods)
+			self.out = reaper_moods
+
+
+
 		elif self.direction == 'CSOUND_from_CSOUND':
 			for token in self.tokens:
 				self.out = token
