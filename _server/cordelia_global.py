@@ -1,0 +1,2 @@
+global CORDELIA_PATH
+CORDELIA_PATH = '/Users/j/Documents/PROJECTs/CORDELIA/'

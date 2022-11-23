@@ -5,7 +5,7 @@ def rprint(string):
 
 def send_to_csound(action):
 	s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-	s.sendto(action, ('localhost', 10025))
+	s.sendto(action.encode(), ('localhost', 10025))
 	s.close()
 
 
@@ -44,18 +44,44 @@ class from_REAPER():
 			for j in range(RPR_GetTrackNumMediaItems(each_track)):
 				item_id = RPR_GetTrackMediaItem(each_track, j)
 				item_pos = RPR_GetMediaItemInfo_Value(item_id, "D_POSITION")
+				item_index = j
 				if current_pos<=item_pos:
 					item_len = RPR_GetMediaItemInfo_Value(item_id, "D_LENGTH")
 					retval, meditem, parname, item_note, var = RPR_GetSetMediaItemInfo_String(item_id, "P_NOTES", 0, 0)
 					take_id = RPR_GetMediaItemTake(item_id, 0)
 					source, source_type, size = RPR_GetMediaSourceType(RPR_GetMediaItemTake_Source(take_id), '', 512)
 
-					if not source_type:
-						source_type = 'NOTE'
-
 					start_pos = item_pos-current_pos
 
-				self.item.append({'start_pos': start_pos, 'length': item_len, 'score': item_note, 'source': source_type})
+					if not source_type:
+						source_type = 'NOTE'
+						self.item.append({'start_pos': start_pos, 'length': item_len, 'score': item_note, 'source': source_type})
+
+					elif source_type == 'MIDI':
+
+						ret_val, ret_take, MIDI_notes, ret_cc, ret_sysex = RPR_MIDI_CountEvts(take_id, 0, 0, 0)
+
+						for x in range(MIDI_notes):
+							note_index = x
+							ret_val, ret_take, note_index, selectedOut, mutedOut, startppqposOut, endppqposOut, note_chn, note_pitch, note_vel = RPR_MIDI_GetNote(take_id, note_index, 0, 0, 0, 0, 0, 0, 0)
+							ppqdur = endppqposOut-startppqposOut
+							note_start = RPR_MIDI_GetProjTimeFromPPQPos(take_id, startppqposOut)
+							note_dur = RPR_MIDI_GetProjTimeFromPPQPos(take_id, ppqdur)
+							if note_dur <= 0:
+								note_dur = .25
+							note_vel = float(note_vel)/256
+							#RPR_ShowConsoleMsg(str(note_pitch) + ', ' + str(note_vel) + ', ' + str(ppqdur) + ', ' + str(note_dur) + '\n')
+							
+							if item_note=='':
+								note_env = 'giclassic'
+							else:
+								note_env = str(item_note)
+							comma = ", " 
+
+							cs_score = 'evaMIDIk "' + 'fairest3' + '", ' + str(note_start-current_pos) + comma + str(note_dur-item_pos) + comma + str(note_vel) + comma + note_env + comma + 'cpstun(1, ' + str(note_pitch) + ', gktuning)\nturnoff\n'
+							#self.item.append({'start_pos': start_pos, 'length': item_len, 'score': cs_score, 'source': source_type, 'item_index': item_index})
+
+
 
 	def call_me(self):
 		self.get_track()
@@ -64,17 +90,28 @@ class from_REAPER():
 reaper_play = False
 
 cor = from_REAPER()
+cordelia_instr_num = 700
 
 def on_play():
+	global cordelia_instr_num
+
 	cor.call_me()
+	send_to_csound(f"turnoff2_i \"heart\", 0, 0")
+	send_to_csound(f"schedule \"heart\", 0, -1")
 	params = ['instr_num', 'start_pos', 'length', 'score']
 	for index, each_item in enumerate(cor.item):
-		send_to_csound(f"instr_num: {index}, {params[1]}: {each_item[params[1]]}, {params[2]}: {each_item[params[2]]}, {params[3]}: {each_item[params[3]]}".encode())
+		if each_item['source'] == 'NOTE':
+			send_to_csound(f"instr_num: {cordelia_instr_num + index}, {params[1]}: {each_item[params[1]]}, {params[2]}: {each_item[params[2]]}, {params[3]}: {each_item[params[3]]}")
 
 def on_stop():
-	cordelia_instr_num = 500
-	for each_num in range(len(cor.item)):
-		send_to_csound(f"kill({cordelia_instr_num + each_num})".encode())
+	global cordelia_instr_num
+	#for each_num in range(len(cor.item)):
+	#	send_to_csound(f"kill({cordelia_instr_num + each_num})".encode())
+	all_instr = []
+	for i in range(len(cor.item)):
+		all_instr.append('\tturnoff3 ' + str(cordelia_instr_num + i) + '\n' + '\tturnoff2 ' + str(cordelia_instr_num + i) + ', 0, 0')
+	joined = '\n'.join(all_instr)
+	send_to_csound(f"\tinstr 695\n{joined}\n\tendin\n\tschedule 695, 0, .05")
 	cor.__init__()
 
 def check_play():

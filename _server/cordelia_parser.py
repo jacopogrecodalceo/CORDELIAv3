@@ -81,8 +81,8 @@ class Parser:
 						print('Exception in parsing:')
 						print(e)	
 
-				elif re.match(r"^kill", token):
-					reaper_moods = {'id': 'MOOD_KILL', 'INSTR': token}
+				else:
+					reaper_moods = {'id': 'MOOD_INIT', 'INSTR': token}
 
 			#print(reaper_moods)
 			self.out = reaper_moods

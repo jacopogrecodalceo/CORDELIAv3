@@ -119,11 +119,13 @@ qb
 reg
 repuck
 search
+sfpiano
 shaku
 shinji
 shinobi
 simki
 six
+six2
 skij
 sufij
 sufij2

@@ -2,6 +2,7 @@ import socket, select, ctcsound
 from threading import Thread
 from datetime import datetime 
 
+from cordelia_global import CORDELIA_PATH
 from cordelia_lexer import Lexer
 from cordelia_parser import Parser
 from cordelia_wrapper import Wrapper
@@ -10,7 +11,6 @@ from func import *
 cs = ctcsound.Csound()
 
 TODAY = datetime.today().strftime('%y%m%d-%H%M')
-CORDELIA_PATH = '/Users/j/Documents/PROJECTs/CORDELIA/'
 
 #add new ports here
 cordelia_ports = {
@@ -66,7 +66,7 @@ def UDP_receive():
 
 def open_cordelia():
 	for v in csound_return_option('dac'):
-		print(v + "\n")
+		#print(v + "\n")
 		cs.setOption(v)	
 	cs.compileOrc(f'#define CORDELIA_PATH #{CORDELIA_PATH}#')
 	CORDELIA_WAV = CORDELIA_PATH + '_score/cor' + TODAY + '.wav'
@@ -88,9 +88,10 @@ if __name__ == '__main__':
 		while cs.performKsmps() == 0:
 			pass
 		cs.cleanup()
-		print('CSOUND is OFF!')
+		print('CSOUND is OFF!') 
 
 """ if __name__ == '__main__':
 	
 	t = Thread(target=UDP_receive)
-	t.start() """
+	t.start()
+ """

@@ -54,6 +54,8 @@ File.readlines($cordelia_include).each do |line|
     orc_livecoding.write(line)
 end
 
-orc_livecoding.write("\n</CsInstruments>\n</CsoundSynthesizer>")
+orc_livecoding.write("\n</CsInstruments>")
+orc_livecoding.write("\n<CsScore>\nf 0 z\n</CsScore>")
+orc_livecoding.write("\n</CsoundSynthesizer>")
 
 orc_livecoding.close

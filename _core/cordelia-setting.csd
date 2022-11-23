@@ -5,14 +5,15 @@
 -3
 -m0
 -D
+-M0
 ;-+msg_color=1
 --messagelevel=96
 --m-amps=1
 
 
 ;-+id_artist=jacopo greco d'alceo
-;-b 128 ; 1024
-;-B 256 ; 4096
+;-b 4096 ;mac 1024
+;-B 8192 ;mac2048
 
 ;-+rtaudio=CoreAudio
 ;-+rtaudio=auhal
@@ -37,7 +38,7 @@
 ;sr		=	192000
 sr		=	48000
 
-ksmps		=	128	;leave it at 64 for real-time
+ksmps		=	64	;leave it at 64 for real-time
 ;nchnls_i	=	12
 nchnls		=	2
 0dbfs		=	1
@@ -56,6 +57,7 @@ gimic1		init 1
 ;#define midi  ##
 ;#define diskclavier  ##
 ;#define royaumont ##
+#define MIDIin ##
 
 
 #define JOIN(arg1'arg2) #$arg1/$arg2#

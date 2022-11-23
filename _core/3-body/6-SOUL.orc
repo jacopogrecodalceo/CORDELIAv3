@@ -10,21 +10,13 @@ od
 ;-----------------------------------------
 	instr 900; MOUTH
 
-ich		init p4
+ich	init p4
+	prints("👅---%f\n", p1)
 
-		prints("👅---%f\n", p1)
-
-aout		chnget gSmouth[ich]
-
-;	DCBLOCK2
-;aout	dcblock2 aout
-aout		*= gkgain
+aout	chnget gSmouth[ich]
+aout	*= gkgain
 
 	outch gioffch+ich+1, aout
-;	SEND AUDIO to OSC
-kwhen		metro 5
-
-	;OSCsend kwhen, gShost, giport, sprintfk("/out%i", ich+1), "s", sprintfk("%f", k(aout))
 
 ;	CLEAR
 	chnclear gSmouth[ich]

@@ -5,14 +5,15 @@
 -3
 -m0
 -D
+-M0
 ;-+msg_color=1
 --messagelevel=96
 --m-amps=1
 
 
 ;-+id_artist=jacopo greco d'alceo
-;-b 128 ; 1024
-;-B 256 ; 4096
+;-b 4096 ;mac 1024
+;-B 8192 ;mac2048
 
 ;-+rtaudio=CoreAudio
 ;-+rtaudio=auhal
@@ -37,7 +38,7 @@
 ;sr		=	192000
 sr		=	48000
 
-ksmps		=	128	;leave it at 64 for real-time
+ksmps		=	64	;leave it at 64 for real-time
 ;nchnls_i	=	12
 nchnls		=	2
 0dbfs		=	1
@@ -56,6 +57,7 @@ gimic1		init 1
 ;#define midi  ##
 ;#define diskclavier  ##
 ;#define royaumont ##
+#define MIDIin ##
 
 
 #define JOIN(arg1'arg2) #$arg1/$arg2#
@@ -129,6 +131,7 @@ gimic1		init 1
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/2-OP/rhythm/eujo.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/2-OP/rhythm/hex.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/2-OP/rhythm/jex.orc)"
+#includestr "$JOIN($CORDELIA_PATH'_core/3-body/2-OP/util/MIDI.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/2-OP/util/accent.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/2-OP/util/accenth.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/2-OP/util/almost.orc)"
@@ -205,6 +208,7 @@ gimic1		init 1
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/_sample/shinji.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/_sample/shinobi.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/_sample/six.orc)"
+#includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/_sample/six2.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/_sample/tape.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/_sample/tension.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/_sample/toy.orc)"
@@ -277,6 +281,7 @@ gimic1		init 1
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/pur.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/qb.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/repuck.orc)"
+#includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/sfpiano.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/simki.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/skij.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/sufij.orc)"
@@ -297,4 +302,7 @@ gimic1		init 1
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/6-SOUL.orc)"
 
 </CsInstruments>
+<CsScore>
+f 0 z
+</CsScore>
 </CsoundSynthesizer>

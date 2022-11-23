@@ -1,7 +1,8 @@
 # BlackHole --nchnls=2 --realtime
 M-Track
+SQ
 RME
 Scarlett
-JBL --nchnls=2
-External Headphones --nchnls=2
-MacBook Pro --nchnls=2
+JBL --nchnls=2 --limiter
+External Headphones --nchnls=2 --limiter
+MacBook Pro --nchnls=2 --limiter

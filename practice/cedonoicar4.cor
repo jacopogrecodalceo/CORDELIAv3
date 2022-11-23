@@ -1,4 +1,4 @@
-@gkpulse almost 95
+gkpulse almost 95
 
 eujo: 9, 16, 16
 	@careless@gesto1
@@ -11,7 +11,7 @@ eujo: 9, 16, 16
 
 eujo: 2, 16, 16
 	+kch pump 4, fillarray(53, 53, 49, 55) 
-	@bass
+	@bebois
 	gkbeats*4
 	accent(3, $f)
 	gilikearev$atk(5)

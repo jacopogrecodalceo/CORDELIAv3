@@ -1,6 +1,6 @@
 require_relative __dir__ + "/_path.rb"
 
-dir_with_all_scala_dir      = '/Users/j/Documents/PROJECTs/_METHOD/_microtonality/scala_pack/'
+dir_with_all_scala_dir      = $cordelia_dir + '/_scale/'
 #dir_with_all_scala_dir = '/Users/j/Downloads/No Octaves/'
 cordelia_scale_file         = $cordelia_head + 'SCALE-SCL.orc'
 cordelia_scale_file7         = $cordelia_head + 'SCALE-SCL7.orc'

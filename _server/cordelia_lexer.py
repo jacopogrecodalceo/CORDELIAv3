@@ -1,9 +1,8 @@
 import re
+from cordelia_global import CORDELIA_PATH
 
 class Lexer:
 	
-
-
 	def __init__(self):
 		self.tokens		= []
 		self.keywords	= ['edo12']
@@ -13,6 +12,11 @@ class Lexer:
 			r"“": '"',
 			r"”": '"'
 		}
+		self.rhythm = []
+		with open(CORDELIA_PATH + '/_lists/list_rhythm') as f:
+			lines = f.readlines()
+			for line in lines:
+				self.rhythm.append(re.compile("^" + line.strip()))
 
 
 
@@ -55,7 +59,7 @@ class Lexer:
 
 
 		elif self.direction == 'CORDELIA_from_REAPER':
-			
+
 			if re.match(r"^instr", self.data):
 				instr_num = re.search(r"instr_num: (.*?),", self.data)[1]
 				start_pos = re.search(r"start_pos: (.*?),", self.data)[1]
@@ -66,23 +70,26 @@ class Lexer:
 				for k, v in self.reaper_replacement.items():
 					score = re.sub(k, v, score)
 
-				lines = []
-				for line in score.splitlines():
-					#remove comments
-					if not re.match(r"^;", line):
-						lines.append(line)
-				#parse for number of lines
-				if len(lines) == 1:
-					if re.match(r"^@", lines[0]):
-						self.tokens.append({'id': 'MOOD_WHIMSY', 'instr_num': int(instr_num), 'start_pos': start_pos, 'length': length, 'score': score.strip()})					
-					else:	
-						self.tokens.append({'id': 'MOOD_STRICT', 'instr_num': int(instr_num), 'start_pos': start_pos, 'length': length, 'score': score.strip()})
-				elif lines:
-					self.tokens.append({'id': 'MOOD_COMPLEX', 'instr_num': int(instr_num), 'start_pos': start_pos, 'length': length, 'score': score.strip()})
-			elif re.match(r"^kill", self.data):
+				is_complex = False
+				for x in self.rhythm:
+					if re.match(x, score):
+						is_complex = True
+
+				if re.match(r"^@", score):
+					self.tokens.append({'id': 'MOOD_WHIMSY', 'instr_num': int(instr_num), 'start_pos': start_pos, 'length': length, 'score': score.strip()})
+				elif is_complex:
+					self.tokens.append({'id': 'MOOD_COMPLEX', 'instr_num': int(instr_num), 'start_pos': start_pos, 'length': length, 'score': score.strip()})	
+				else:
+					self.tokens.append({'id': 'MOOD_STRICT', 'instr_num': int(instr_num), 'start_pos': start_pos, 'length': length, 'score': score.strip()})
+
+			elif re.match(r"^midi", self.data):
+				instr_num = re.search(r"midi: (.*?),", self.data)[1]
+				score = re.search(r"score: (.*)", self.data, re.MULTILINE | re.DOTALL)[1]
+				#print(score)
+				self.tokens.append({'instr_num': int(instr_num), 'score': score.strip()})
+
+			else:
 				self.tokens.append(self.data)
-
-
 
 		elif self.direction == 'CSOUND_from_CSOUND':
 			self.tokens.append(self.data)

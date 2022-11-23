@@ -1,4 +1,4 @@
-@gkpulse = 75
+gkpulse = 75
 
 eujo: 4, 8, 4
 	@burd
@@ -9,7 +9,7 @@ eujo: 4, 8, 4
 
 jex: "103eab58", 4
 	@ixland.flingj(gkbeatms*4)
-	gkbeats*random:k(.5, 8)
+	gkbeats*random:k(.5, 8)*0
 	accent(3, $f)
 	gieclassic
 	step("4B", giminor, (gkbeatn%4)+pump(16, fillarray(1, -2, -5, -4, 7, 5, 4, 9)))
@@ -17,6 +17,6 @@ jex: "103eab58", 4
 eujo: 5, 8, 16
 	@kick
 	gkbeats
-	accent(3, $fff)
+	accent(3, $ff)
 	giclassic
-	step("2B", giminor, pump(4, fillarray(1, -2, -5, -4)))
+	95

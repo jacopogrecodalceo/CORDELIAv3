@@ -46,11 +46,11 @@ class Wrapper:
 								self.last_route[index] = None
 
 		elif self.direction == 'CORDELIA_from_REAPER':
-			if self.instr['id'] == 'MOOD_KILL':
+			if self.instr['id'] == 'MOOD_INIT':
 				self.out.append(separator + f"\t{self.instr['INSTR']}\n")
 			else:	
-				self.out.append(separator + f"\tinstr {cordelia_instr_num + self.instr['instr_num']}\n{self.instr['INSTR']}\n{self.instr['ROUTE']}\n\tendin\n")
-				self.out.append(f"\tschedule {cordelia_instr_num + self.instr['instr_num']}, {self.instr['start_pos']}, {self.instr['length']}\n")
+				self.out.append(separator + f"\tinstr {self.instr['instr_num']}\n{self.instr['INSTR']}\n{self.instr['ROUTE']}\n\tendin\n")
+				self.out.append(f"\tschedule {self.instr['instr_num']}, {self.instr['start_pos']}, {self.instr['length']}\n")
 
 
 
