@@ -8,8 +8,6 @@ def send_to_csound(action):
 	s.sendto(action.encode(), ('localhost', 10025))
 	s.close()
 
-
-
 class from_REAPER():
 
 	def __init__(self):
@@ -55,7 +53,7 @@ class from_REAPER():
 
 					if not source_type:
 						source_type = 'NOTE'
-						self.item.append({'start_pos': start_pos, 'length': item_len, 'score': item_note, 'source': source_type})
+						self.item.append({'start_pos': start_pos, 'length': item_len, 'score': item_note, 'source': source_type, 'item_index': item_index})
 
 					elif source_type == 'MIDI':
 
@@ -79,7 +77,7 @@ class from_REAPER():
 							comma = ", " 
 
 							cs_score = 'evaMIDIk "' + 'fairest3' + '", ' + str(note_start-current_pos) + comma + str(note_dur-item_pos) + comma + str(note_vel) + comma + note_env + comma + 'cpstun(1, ' + str(note_pitch) + ', gktuning)\nturnoff\n'
-							#self.item.append({'start_pos': start_pos, 'length': item_len, 'score': cs_score, 'source': source_type, 'item_index': item_index})
+							self.item.append({'start_pos': start_pos, 'length': item_len, 'score': cs_score, 'source': source_type, 'item_index': item_index})
 
 
 
@@ -91,9 +89,11 @@ reaper_play = False
 
 cor = from_REAPER()
 cordelia_instr_num = 700
+cordelia_turnoff = []
 
 def on_play():
 	global cordelia_instr_num
+	global cordelia_turnoff
 
 	cor.call_me()
 	send_to_csound(f"turnoff2_i \"heart\", 0, 0")
@@ -101,18 +101,27 @@ def on_play():
 	params = ['instr_num', 'start_pos', 'length', 'score']
 	for index, each_item in enumerate(cor.item):
 		if each_item['source'] == 'NOTE':
-			send_to_csound(f"instr_num: {cordelia_instr_num + index}, {params[1]}: {each_item[params[1]]}, {params[2]}: {each_item[params[2]]}, {params[3]}: {each_item[params[3]]}")
+			num = cordelia_instr_num + index + each_item['item_index']
+			send_to_csound(f"instr_num: {num}, {params[1]}: {each_item[params[1]]}, {params[2]}: {each_item[params[2]]}, {params[3]}: {each_item[params[3]]}")
+			cordelia_turnoff.append(num)
+		if each_item['source'] == 'MIDI':
+			num = cordelia_instr_num + each_item['item_index']
+			send_to_csound(f"instr_num: {cordelia_instr_num + each_item['item_index']}, {params[1]}: {each_item[params[1]]}, {params[2]}: {each_item[params[2]]}, {params[3]}: {each_item[params[3]]}")
+			cordelia_turnoff.append(num)
+
 
 def on_stop():
-	global cordelia_instr_num
+	global cordelia_turnoff
+
 	#for each_num in range(len(cor.item)):
 	#	send_to_csound(f"kill({cordelia_instr_num + each_num})".encode())
 	all_instr = []
-	for i in range(len(cor.item)):
-		all_instr.append('\tturnoff3 ' + str(cordelia_instr_num + i) + '\n' + '\tturnoff2 ' + str(cordelia_instr_num + i) + ', 0, 0')
+	for i in cordelia_turnoff:
+		all_instr.append('\tturnoff3 ' + str(i) + '\n' + '\tturnoff2 ' + str(i) + ', 0, 0')
 	joined = '\n'.join(all_instr)
 	send_to_csound(f"\tinstr 695\n{joined}\n\tendin\n\tschedule 695, 0, .05")
 	cor.__init__()
+	cordelia_turnoff.clear()
 
 def check_play():
 

@@ -82,12 +82,6 @@ class Lexer:
 				else:
 					self.tokens.append({'id': 'MOOD_STRICT', 'instr_num': int(instr_num), 'start_pos': start_pos, 'length': length, 'score': score.strip()})
 
-			elif re.match(r"^midi", self.data):
-				instr_num = re.search(r"midi: (.*?),", self.data)[1]
-				score = re.search(r"score: (.*)", self.data, re.MULTILINE | re.DOTALL)[1]
-				#print(score)
-				self.tokens.append({'instr_num': int(instr_num), 'score': score.strip()})
-
 			else:
 				self.tokens.append(self.data)
 
