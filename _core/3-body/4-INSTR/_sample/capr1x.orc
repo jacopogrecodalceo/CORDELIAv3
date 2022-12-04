@@ -1,14 +1,10 @@
-gScapr1x_04_file 	 init "/Users/j/Documents/PROJECTs/CORDELIA/samples/capr1x/capr1x-04.wav"
-gicapr1x_04_1		 ftgen 0, 0, 0, 1, gScapr1x_04_file, 0, 0, 1
-gicapr1x_04_2		 ftgen 0, 0, 0, 1, gScapr1x_04_file, 0, 0, 2
+gScapr1x_00_file 	 init "/Users/j/Documents/PROJECTs/CORDELIA/samples/capr1x/capr1x-00.wav"
+gicapr1x_00_1		 ftgen 0, 0, 0, 1, gScapr1x_00_file, 0, 0, 1
+gicapr1x_00_2		 ftgen 0, 0, 0, 1, gScapr1x_00_file, 0, 0, 2
 ;-------
 gScapr1x_01_file 	 init "/Users/j/Documents/PROJECTs/CORDELIA/samples/capr1x/capr1x-01.wav"
 gicapr1x_01_1		 ftgen 0, 0, 0, 1, gScapr1x_01_file, 0, 0, 1
 gicapr1x_01_2		 ftgen 0, 0, 0, 1, gScapr1x_01_file, 0, 0, 2
-;-------
-gScapr1x_00_file 	 init "/Users/j/Documents/PROJECTs/CORDELIA/samples/capr1x/capr1x-00.wav"
-gicapr1x_00_1		 ftgen 0, 0, 0, 1, gScapr1x_00_file, 0, 0, 1
-gicapr1x_00_2		 ftgen 0, 0, 0, 1, gScapr1x_00_file, 0, 0, 2
 ;-------
 gScapr1x_02_file 	 init "/Users/j/Documents/PROJECTs/CORDELIA/samples/capr1x/capr1x-02.wav"
 gicapr1x_02_1		 ftgen 0, 0, 0, 1, gScapr1x_02_file, 0, 0, 1
@@ -18,7 +14,11 @@ gScapr1x_03_file 	 init "/Users/j/Documents/PROJECTs/CORDELIA/samples/capr1x/cap
 gicapr1x_03_1		 ftgen 0, 0, 0, 1, gScapr1x_03_file, 0, 0, 1
 gicapr1x_03_2		 ftgen 0, 0, 0, 1, gScapr1x_03_file, 0, 0, 2
 ;-------
-gicapr1x_sonvs[]			fillarray	gicapr1x_04_1, gicapr1x_04_2, gicapr1x_01_1, gicapr1x_01_2, gicapr1x_00_1, gicapr1x_00_2, gicapr1x_02_1, gicapr1x_02_2, gicapr1x_03_1, gicapr1x_03_2;-------
+gScapr1x_04_file 	 init "/Users/j/Documents/PROJECTs/CORDELIA/samples/capr1x/capr1x-04.wav"
+gicapr1x_04_1		 ftgen 0, 0, 0, 1, gScapr1x_04_file, 0, 0, 1
+gicapr1x_04_2		 ftgen 0, 0, 0, 1, gScapr1x_04_file, 0, 0, 2
+;-------
+gicapr1x_sonvs[]			fillarray	gicapr1x_00_1, gicapr1x_00_2, gicapr1x_01_1, gicapr1x_01_2, gicapr1x_02_1, gicapr1x_02_2, gicapr1x_03_1, gicapr1x_03_2, gicapr1x_04_1, gicapr1x_04_2;-------
 gkcapr1x_time		init 16
 gkcapr1x_off		init .005
 gkcapr1x_dur		init 1
