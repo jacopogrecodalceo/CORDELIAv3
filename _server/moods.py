@@ -167,7 +167,7 @@ def Complex(mood):
 	for line in lines:
 		line = line.strip()
 		if line.startswith('+'):
-			line = re.sub(r"\+", '', line)
+			line = re.sub(r"^\+", '', line)
 			inside_adds.append(line)
 		else:
 			instr_lines.append(line)

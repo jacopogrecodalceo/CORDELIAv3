@@ -12,10 +12,13 @@
 
 
 ;-+id_artist=jacopo greco d'alceo
-;-b 4096 ;mac 1024
-;-B 8192 ;mac2048
+;-b 512 ;mac 1024
+;-B 1024 ;mac 2048
 
 ;-+rtaudio=CoreAudio
+
+;-b 1024
+;-B 4096
 ;-+rtaudio=auhal
 
 ;--realtime
@@ -40,17 +43,12 @@ sr		=	48000
 
 ksmps		=	64	;leave it at 64 for real-time
 ;nchnls_i	=	12
-nchnls		=	4
+nchnls		=	2
 0dbfs		=	1
 ;A4		=	438	;only for ancient music	
 
 ginchnls	init nchnls	;e.g. click track
 gioffch		init 0		;e.g. I want to go out in 3, 4
-
-;		INs
-ginkick_ch	init 9	;a mono channel
-ginsna_ch	init 10
-gimic1		init 1
 
 ;#define hydraudiosync ##
 ;#define printscore ##
@@ -214,10 +212,14 @@ gimic1		init 1
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/_sample/toy.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/_sample/valle.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/_sample/virgule.orc)"
+#includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/_sf/choir.orc)"
+#includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/_sf/sfpiano.orc)"
+#includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/_sf/timp.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/aaron.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/alone.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/alonefr.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/bass.orc)"
+#includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/bd808.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/bebois.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/beboo.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/bebor.orc)"
@@ -254,13 +256,15 @@ gimic1		init 1
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/grind.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/grind2.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/grind3.orc)"
-#includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/inkick.orc)"
+#includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/in1.orc)"
+#includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/in2.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/inmic1.orc)"
-#includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/insna.orc)"
+#includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/inmic2.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/ipercluster.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/ixland.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/kick.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/lucas.orc)"
+#includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/luv.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/maij.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/maij2.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/meli2.orc)"
@@ -281,7 +285,6 @@ gimic1		init 1
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/pur.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/qb.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/repuck.orc)"
-#includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/sfpiano.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/simki.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/skij.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/sufij.orc)"
@@ -298,6 +301,7 @@ gimic1		init 1
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/witches2.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/wutang.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/xylo.orc)"
+#includestr "$JOIN($CORDELIA_PATH'_core/3-body/5-ADDON/osc_control.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/5-ADDON/roy.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/6-SOUL.orc)"
 

@@ -4,7 +4,7 @@ gkaaron_mod	init 1 ;mod parameter for aaron instr
 gkaaron_indx	init 3 ;index parameter for aaron instr
 gkaaron_detune	init 0 ;detune parameter for aaron instr
 
-giaaron_atk		init .0095
+giaaron_atk		init .0125
 
 	instr aaron_instr_1
 

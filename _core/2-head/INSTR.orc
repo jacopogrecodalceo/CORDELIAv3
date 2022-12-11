@@ -1,4 +1,4 @@
-gSinstrs[]			fillarray	"aaron", "alghed", "alghef", "algo", "algo2", "alone", "alonefr", "amen", "amor", "arm1", "arm2", "armagain", "bass", "bd10", "bebois", "beboo", "bebor", "becapr", "bee", "bee", "begad", "begaf", "beme", "between", "betweenmore", "bleu", "bois", "bois2", "burd", "calin", "calinin", "capr1x", "capr2x", "capriccio1", "capriccio2", "careless", "careless2", "cascade", "cascadexp", "chime", "chiseq", "ciel", "click", "coeur", "contempo", "corpia", "crij", "cril", "curij", "curij2", "dance", "dmitri", "dmitrif", "drum", "drumhigh", "etag", "etag2", "euarm", "euarm2", "fairest", "fairest2", "fairest3", "fairest4", "fim", "flij", "flou", "fragment", "fuji", "gameld", "gamelf", "gesto1", "gesto1var", "gesto2", "gesto3", "gesto4", "grind", "grind2", "grind3", "hh", "inkick", "inmic1", "insna", "ipercluster", "ixland", "junis", "kick", "leo", "lucas", "madcow", "maij", "maij2", "maison", "mario1", "mario2", "meer", "meli", "meli2", "metal", "mhon", "mhon2", "mhon2q", "mhonq", "nasa", "ninfa", "noij", "november", "ocean", "ohoh", "orphans", "orphans2", "orphans3", "pij", "pijnor", "planche", "puck", "pucky", "pur", "qb", "reg", "repuck", "search", "sfpiano", "shaku", "shinji", "shinobi", "simki", "six", "six2", "skij", "sufij", "sufij2", "sunij", "tape", "tension", "toomuchalone", "toy", "trans", "uni", "valle", "ventre", "virgule", "wendi", "wendj", "wendy", "witches", "witches2", "wutang", "xylo"
+gSinstrs[]			fillarray	"aaron", "alghed", "alghef", "algo", "algo2", "alone", "alonefr", "amen", "amor", "arm1", "arm2", "armagain", "bass", "bd10", "bd808", "bebois", "beboo", "bebor", "becapr", "bee", "bee", "begad", "begaf", "beme", "between", "betweenmore", "bleu", "bois", "bois2", "burd", "calin", "calinin", "capr1x", "capr2x", "capriccio1", "capriccio2", "careless", "careless2", "cascade", "cascadexp", "chime", "chiseq", "choir", "ciel", "click", "coeur", "contempo", "corpia", "crij", "cril", "curij", "curij2", "dance", "dmitri", "dmitrif", "drum", "drumhigh", "etag", "etag2", "euarm", "euarm2", "fairest", "fairest2", "fairest3", "fairest4", "fim", "flij", "flou", "fragment", "fuji", "gameld", "gamelf", "gesto1", "gesto1var", "gesto2", "gesto3", "gesto4", "grind", "grind2", "grind3", "hh", "in1", "in2", "inmic1", "inmic2", "ipercluster", "ixland", "junis", "kick", "leo", "lucas", "luv", "madcow", "maij", "maij2", "maison", "mario1", "mario2", "meer", "meli", "meli2", "metal", "mhon", "mhon2", "mhon2q", "mhonq", "nasa", "ninfa", "noij", "november", "ocean", "ohoh", "orphans", "orphans2", "orphans3", "pij", "pijnor", "planche", "puck", "pucky", "pur", "qb", "reg", "repuck", "search", "sfpiano", "shaku", "shinji", "shinobi", "simki", "six", "six2", "skij", "sufij", "sufij2", "sunij", "tape", "tension", "timp", "toomuchalone", "toy", "trans", "uni", "valle", "ventre", "virgule", "wendi", "wendj", "wendy", "witches", "witches2", "wutang", "xylo"
 
 ginstrslen			lenarray gSinstrs
 
@@ -16,6 +16,7 @@ gSarm2[]			init ginchnls
 gSarmagain[]			init ginchnls
 gSbass[]			init ginchnls
 gSbd10[]			init ginchnls
+gSbd808[]			init ginchnls
 gSbebois[]			init ginchnls
 gSbeboo[]			init ginchnls
 gSbebor[]			init ginchnls
@@ -43,6 +44,7 @@ gScascade[]			init ginchnls
 gScascadexp[]			init ginchnls
 gSchime[]			init ginchnls
 gSchiseq[]			init ginchnls
+gSchoir[]			init ginchnls
 gSciel[]			init ginchnls
 gSclick[]			init ginchnls
 gScoeur[]			init ginchnls
@@ -81,15 +83,17 @@ gSgrind[]			init ginchnls
 gSgrind2[]			init ginchnls
 gSgrind3[]			init ginchnls
 gShh[]			init ginchnls
-gSinkick[]			init ginchnls
+gSin1[]			init ginchnls
+gSin2[]			init ginchnls
 gSinmic1[]			init ginchnls
-gSinsna[]			init ginchnls
+gSinmic2[]			init ginchnls
 gSipercluster[]			init ginchnls
 gSixland[]			init ginchnls
 gSjunis[]			init ginchnls
 gSkick[]			init ginchnls
 gSleo[]			init ginchnls
 gSlucas[]			init ginchnls
+gSluv[]			init ginchnls
 gSmadcow[]			init ginchnls
 gSmaij[]			init ginchnls
 gSmaij2[]			init ginchnls
@@ -136,6 +140,7 @@ gSsufij2[]			init ginchnls
 gSsunij[]			init ginchnls
 gStape[]			init ginchnls
 gStension[]			init ginchnls
+gStimp[]			init ginchnls
 gStoomuchalone[]			init ginchnls
 gStoy[]			init ginchnls
 gStrans[]			init ginchnls
@@ -167,6 +172,7 @@ until	indx == ginchnls do
 	gSarmagain[indx]			sprintf	"armagain_%i", indx+1
 	gSbass[indx]			sprintf	"bass_%i", indx+1
 	gSbd10[indx]			sprintf	"bd10_%i", indx+1
+	gSbd808[indx]			sprintf	"bd808_%i", indx+1
 	gSbebois[indx]			sprintf	"bebois_%i", indx+1
 	gSbeboo[indx]			sprintf	"beboo_%i", indx+1
 	gSbebor[indx]			sprintf	"bebor_%i", indx+1
@@ -194,6 +200,7 @@ until	indx == ginchnls do
 	gScascadexp[indx]			sprintf	"cascadexp_%i", indx+1
 	gSchime[indx]			sprintf	"chime_%i", indx+1
 	gSchiseq[indx]			sprintf	"chiseq_%i", indx+1
+	gSchoir[indx]			sprintf	"choir_%i", indx+1
 	gSciel[indx]			sprintf	"ciel_%i", indx+1
 	gSclick[indx]			sprintf	"click_%i", indx+1
 	gScoeur[indx]			sprintf	"coeur_%i", indx+1
@@ -232,15 +239,17 @@ until	indx == ginchnls do
 	gSgrind2[indx]			sprintf	"grind2_%i", indx+1
 	gSgrind3[indx]			sprintf	"grind3_%i", indx+1
 	gShh[indx]			sprintf	"hh_%i", indx+1
-	gSinkick[indx]			sprintf	"inkick_%i", indx+1
+	gSin1[indx]			sprintf	"in1_%i", indx+1
+	gSin2[indx]			sprintf	"in2_%i", indx+1
 	gSinmic1[indx]			sprintf	"inmic1_%i", indx+1
-	gSinsna[indx]			sprintf	"insna_%i", indx+1
+	gSinmic2[indx]			sprintf	"inmic2_%i", indx+1
 	gSipercluster[indx]			sprintf	"ipercluster_%i", indx+1
 	gSixland[indx]			sprintf	"ixland_%i", indx+1
 	gSjunis[indx]			sprintf	"junis_%i", indx+1
 	gSkick[indx]			sprintf	"kick_%i", indx+1
 	gSleo[indx]			sprintf	"leo_%i", indx+1
 	gSlucas[indx]			sprintf	"lucas_%i", indx+1
+	gSluv[indx]			sprintf	"luv_%i", indx+1
 	gSmadcow[indx]			sprintf	"madcow_%i", indx+1
 	gSmaij[indx]			sprintf	"maij_%i", indx+1
 	gSmaij2[indx]			sprintf	"maij2_%i", indx+1
@@ -287,6 +296,7 @@ until	indx == ginchnls do
 	gSsunij[indx]			sprintf	"sunij_%i", indx+1
 	gStape[indx]			sprintf	"tape_%i", indx+1
 	gStension[indx]			sprintf	"tension_%i", indx+1
+	gStimp[indx]			sprintf	"timp_%i", indx+1
 	gStoomuchalone[indx]			sprintf	"toomuchalone_%i", indx+1
 	gStoy[indx]			sprintf	"toy_%i", indx+1
 	gStrans[indx]			sprintf	"trans_%i", indx+1

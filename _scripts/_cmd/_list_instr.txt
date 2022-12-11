@@ -12,6 +12,7 @@ arm2
 armagain
 bass
 bd10
+bd808
 bebois
 beboo
 bebor
@@ -39,6 +40,7 @@ cascade
 cascadexp
 chime
 chiseq
+choir
 ciel
 click
 coeur
@@ -77,15 +79,17 @@ grind
 grind2
 grind3
 hh
-inkick
+in1
+in2
 inmic1
-insna
+inmic2
 ipercluster
 ixland
 junis
 kick
 leo
 lucas
+luv
 madcow
 maij
 maij2
@@ -132,6 +136,7 @@ sufij2
 sunij
 tape
 tension
+timp
 toomuchalone
 toy
 trans

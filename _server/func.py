@@ -26,7 +26,7 @@ def csound_return_option(sel):
 						if sel == 'adc':
 							if re.search(r"adc", csound_line):
 								device_adc = re.search(r"adc\d+", csound_line)[0]
-								return '-i' + device_adc
+								return ['-i' + device_adc]
 						if sel == 'inchs':
 							if re.search(r"adc", csound_line):
 								device_inchnls = re.search(r"ch:(\d+)", csound_line)[1]

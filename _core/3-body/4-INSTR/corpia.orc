@@ -32,7 +32,7 @@ aout			= apia + (a1 + a2 + a3)*.85
 aout			*= ($ampvar)/7
 
 aout			skf aout, icps*cosseg(13, idur, 3), 2.15+$ampvar
-
+aout			limit aout, -1, 1
 ienvvar	init idur/10
 
 	$death

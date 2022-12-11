@@ -33,7 +33,7 @@ lexer = Lexer()
 parser = Parser()
 wrapper = Wrapper()
 
-UDP_size = 1024
+UDP_size = 4096
 
 def UDP_receive():
 	print('UDPs are ready')
@@ -68,6 +68,10 @@ def open_cordelia():
 	for v in csound_return_option('dac'):
 		#print(v + "\n")
 		cs.setOption(v)	
+	#for v in csound_return_option('adc'):
+		#print(v + "\n")
+		#cs.setOption(v)
+	#cs.setOption('-odac1')
 	cs.compileOrc(f'#define CORDELIA_PATH #{CORDELIA_PATH}#')
 	CORDELIA_WAV = CORDELIA_PATH + '_score/cor' + TODAY + '.wav'
 	CORDELIA_ORC = CORDELIA_PATH + '_score/cor' + TODAY + '.orc'

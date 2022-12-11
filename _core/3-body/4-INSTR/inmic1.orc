@@ -1,9 +1,11 @@
+ginmic1		init 1
+
 	instr inmic1
 
 Sinstr		init "inmic1"
 ich		init p4
 
-aout		inch gimic1
+aout		inch ginmic1
 
 	$mix	
 

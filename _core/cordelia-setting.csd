@@ -5,17 +5,22 @@
 -3
 -m0
 -D
--M0
+;-M0
 ;-+msg_color=1
 --messagelevel=96
 --m-amps=1
 
 
 ;-+id_artist=jacopo greco d'alceo
-;-b 4096 ;mac 1024
-;-B 8192 ;mac2048
+;-b 512 ;mac 1024
+;-B 1024 ;mac 2048
 
+-b 1024
+-B 2048
 ;-+rtaudio=CoreAudio
+
+;-b 1024
+;-B 4096
 ;-+rtaudio=auhal
 
 ;--realtime
@@ -40,17 +45,12 @@ sr		=	48000
 
 ksmps		=	64	;leave it at 64 for real-time
 ;nchnls_i	=	12
-nchnls		=	4
+nchnls		=	2
 0dbfs		=	1
 ;A4		=	438	;only for ancient music	
 
 ginchnls	init nchnls	;e.g. click track
 gioffch		init 0		;e.g. I want to go out in 3, 4
-
-;		INs
-ginkick_ch	init 9	;a mono channel
-ginsna_ch	init 10
-gimic1		init 1
 
 ;#define hydraudiosync ##
 ;#define printscore ##

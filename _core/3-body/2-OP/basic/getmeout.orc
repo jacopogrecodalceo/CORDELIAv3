@@ -35,7 +35,7 @@ next:
 ain		chnget sprintf("%s_%i", Sinstr, ich+1)
 aout		= ain
 
-			xtratim gixtratim
+		xtratim gixtratim
 krel		init 0
 krel		release
 igain		i 1
