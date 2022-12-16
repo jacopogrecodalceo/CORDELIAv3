@@ -6,7 +6,7 @@ orc_path = sf_dir + '_printsf.orc'
 sco_path = sf_dir + '_printsf.sco'
 log_path = sf_dir + '_printsf.log'
 
-orc_out_path = sf_dir +'_sf_list.orc'
+orc_out_path = sf_dir +'soundfont.orc'
 list_out_path = sf_dir +'_sf_list.txt'
 
 sf_score = File.open(sco_path, 'w')
@@ -24,7 +24,7 @@ sf_score.close unless sf_score.nil?
 
 cmd = `csound #{orc_path} #{sco_path} --env:SSDIR+=../ -I -O #{log_path}`
 
-
+subs = ['-', '<', '>', '^', "'", '.', '[', ']']
 
 sf_instrs = []
 
@@ -44,10 +44,16 @@ File.readlines(log_path).each do |line|
     end
     if line.match(/(\d+\).*?)\s*prog/)
         line = line.match(/\d+\)\s+(.*?)\s*prog/)[1].downcase.gsub(' ', '_').gsub(')', '')
+        subs.each do |s|
+            line = line.gsub(s, '')
+            line = line.gsub(/\d+/, 'num')
+        end
+
         sf_instrs << line
     end
 end
 
+=begin
 
 string = <<~CS
 if strcmp(Sinstr, \"#{sf_instrs.first}\") == 0 then
@@ -69,6 +75,23 @@ CS
 orc_out.write(string + "\n")
 orc_out.close unless orc_out.nil?
 
+=end
+
+sf_instrs.each_with_index do |sf, index|
+    string = <<~CS
+            instr #{sf}
+                    $params
+        ipre        init p8
+        
+        aout	    sfplay3m 1, ftom:i(A4), $ampvar/4096, icps, #{index}, 1
+        ienvvar		init idur/10
+        
+                    $death
+
+            endin
+    CS
+    orc_out.write(string + "\n")
+end
 
 
 list_out = File.open(list_out_path, 'w')

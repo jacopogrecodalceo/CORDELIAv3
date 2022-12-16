@@ -4,4 +4,6 @@
 
 kdel    = ktime
 
-aout	nreverb ain, ktime, 1-kfb
+arev	nreverb ain, ktime, 1-kfb
+
+aout	= (ain + arev)/2

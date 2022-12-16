@@ -40,7 +40,6 @@ cascade
 cascadexp
 chime
 chiseq
-choir
 ciel
 click
 coeur
@@ -123,7 +122,6 @@ qb
 reg
 repuck
 search
-sfpiano
 shaku
 shinji
 shinobi
@@ -136,7 +134,6 @@ sufij2
 sunij
 tape
 tension
-timp
 toomuchalone
 toy
 trans

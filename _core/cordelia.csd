@@ -5,7 +5,7 @@
 -3
 -m0
 -D
--M0
+;-M0
 ;-+msg_color=1
 --messagelevel=96
 --m-amps=1
@@ -15,6 +15,8 @@
 ;-b 512 ;mac 1024
 ;-B 1024 ;mac 2048
 
+-b 1024
+-B 2048
 ;-+rtaudio=CoreAudio
 
 ;-b 1024
@@ -212,9 +214,6 @@ gioffch		init 0		;e.g. I want to go out in 3, 4
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/_sample/toy.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/_sample/valle.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/_sample/virgule.orc)"
-#includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/_sf/choir.orc)"
-#includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/_sf/sfpiano.orc)"
-#includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/_sf/timp.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/aaron.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/alone.orc)"
 #includestr "$JOIN($CORDELIA_PATH'_core/3-body/4-INSTR/alonefr.orc)"

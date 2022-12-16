@@ -16,14 +16,14 @@ cordelia_file_open12 = File.open(cordelia_scale_file12, 'w')
 ftgen_format = []
 
 replacements = {
-' ' => '_',
-'#' => 'dies',
-'-' => '_',
-'+' => '_',
-'(' => '_',
-')' => '_',
-'[' => '_',
-']' => '_'
+    ' ' => '_',
+    '#' => 'dies',
+    '-' => '_',
+    '+' => '_',
+    '(' => '_',
+    ')' => '_',
+    '[' => '_',
+    ']' => '_'
 }
 
 Dir[dir_with_all_scala_dir + '**/*.scl'].each do |f|
@@ -48,7 +48,7 @@ Dir[dir_with_all_scala_dir + '**/*.scl'].each do |f|
         #p f
         description = ';' + "---\n"
     end
-    
+
     #second line is degrees
     degrees = lines[1][/(.*?)($|\s.*)/, 1]
 

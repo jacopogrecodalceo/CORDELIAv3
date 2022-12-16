@@ -1,4 +1,4 @@
-gSinstrs[]			fillarray	"aaron", "alghed", "alghef", "algo", "algo2", "alone", "alonefr", "amen", "amor", "arm1", "arm2", "armagain", "bass", "bd10", "bd808", "bebois", "beboo", "bebor", "becapr", "bee", "bee", "begad", "begaf", "beme", "between", "betweenmore", "bleu", "bois", "bois2", "burd", "calin", "calinin", "capr1x", "capr2x", "capriccio1", "capriccio2", "careless", "careless2", "cascade", "cascadexp", "chime", "chiseq", "choir", "ciel", "click", "coeur", "contempo", "corpia", "crij", "cril", "curij", "curij2", "dance", "dmitri", "dmitrif", "drum", "drumhigh", "etag", "etag2", "euarm", "euarm2", "fairest", "fairest2", "fairest3", "fairest4", "fim", "flij", "flou", "fragment", "fuji", "gameld", "gamelf", "gesto1", "gesto1var", "gesto2", "gesto3", "gesto4", "grind", "grind2", "grind3", "hh", "in1", "in2", "inmic1", "inmic2", "ipercluster", "ixland", "junis", "kick", "leo", "lucas", "luv", "madcow", "maij", "maij2", "maison", "mario1", "mario2", "meer", "meli", "meli2", "metal", "mhon", "mhon2", "mhon2q", "mhonq", "nasa", "ninfa", "noij", "november", "ocean", "ohoh", "orphans", "orphans2", "orphans3", "pij", "pijnor", "planche", "puck", "pucky", "pur", "qb", "reg", "repuck", "search", "sfpiano", "shaku", "shinji", "shinobi", "simki", "six", "six2", "skij", "sufij", "sufij2", "sunij", "tape", "tension", "timp", "toomuchalone", "toy", "trans", "uni", "valle", "ventre", "virgule", "wendi", "wendj", "wendy", "witches", "witches2", "wutang", "xylo"
+gSinstrs[]			fillarray	"aaron", "alghed", "alghef", "algo", "algo2", "alone", "alonefr", "amen", "amor", "arm1", "arm2", "armagain", "bass", "bd10", "bd808", "bebois", "beboo", "bebor", "becapr", "bee", "bee", "begad", "begaf", "beme", "between", "betweenmore", "bleu", "bois", "bois2", "burd", "calin", "calinin", "capr1x", "capr2x", "capriccio1", "capriccio2", "careless", "careless2", "cascade", "cascadexp", "chime", "chiseq", "ciel", "click", "coeur", "contempo", "corpia", "crij", "cril", "curij", "curij2", "dance", "dmitri", "dmitrif", "drum", "drumhigh", "etag", "etag2", "euarm", "euarm2", "fairest", "fairest2", "fairest3", "fairest4", "fim", "flij", "flou", "fragment", "fuji", "gameld", "gamelf", "gesto1", "gesto1var", "gesto2", "gesto3", "gesto4", "grind", "grind2", "grind3", "hh", "in1", "in2", "inmic1", "inmic2", "ipercluster", "ixland", "junis", "kick", "leo", "lucas", "luv", "madcow", "maij", "maij2", "maison", "mario1", "mario2", "meer", "meli", "meli2", "metal", "mhon", "mhon2", "mhon2q", "mhonq", "nasa", "ninfa", "noij", "november", "ocean", "ohoh", "orphans", "orphans2", "orphans3", "pij", "pijnor", "planche", "puck", "pucky", "pur", "qb", "reg", "repuck", "search", "shaku", "shinji", "shinobi", "simki", "six", "six2", "skij", "sufij", "sufij2", "sunij", "tape", "tension", "toomuchalone", "toy", "trans", "uni", "valle", "ventre", "virgule", "wendi", "wendj", "wendy", "witches", "witches2", "wutang", "xylo"
 
 ginstrslen			lenarray gSinstrs
 
@@ -44,7 +44,6 @@ gScascade[]			init ginchnls
 gScascadexp[]			init ginchnls
 gSchime[]			init ginchnls
 gSchiseq[]			init ginchnls
-gSchoir[]			init ginchnls
 gSciel[]			init ginchnls
 gSclick[]			init ginchnls
 gScoeur[]			init ginchnls
@@ -127,7 +126,6 @@ gSqb[]			init ginchnls
 gSreg[]			init ginchnls
 gSrepuck[]			init ginchnls
 gSsearch[]			init ginchnls
-gSsfpiano[]			init ginchnls
 gSshaku[]			init ginchnls
 gSshinji[]			init ginchnls
 gSshinobi[]			init ginchnls
@@ -140,7 +138,6 @@ gSsufij2[]			init ginchnls
 gSsunij[]			init ginchnls
 gStape[]			init ginchnls
 gStension[]			init ginchnls
-gStimp[]			init ginchnls
 gStoomuchalone[]			init ginchnls
 gStoy[]			init ginchnls
 gStrans[]			init ginchnls
@@ -200,7 +197,6 @@ until	indx == ginchnls do
 	gScascadexp[indx]			sprintf	"cascadexp_%i", indx+1
 	gSchime[indx]			sprintf	"chime_%i", indx+1
 	gSchiseq[indx]			sprintf	"chiseq_%i", indx+1
-	gSchoir[indx]			sprintf	"choir_%i", indx+1
 	gSciel[indx]			sprintf	"ciel_%i", indx+1
 	gSclick[indx]			sprintf	"click_%i", indx+1
 	gScoeur[indx]			sprintf	"coeur_%i", indx+1
@@ -283,7 +279,6 @@ until	indx == ginchnls do
 	gSreg[indx]			sprintf	"reg_%i", indx+1
 	gSrepuck[indx]			sprintf	"repuck_%i", indx+1
 	gSsearch[indx]			sprintf	"search_%i", indx+1
-	gSsfpiano[indx]			sprintf	"sfpiano_%i", indx+1
 	gSshaku[indx]			sprintf	"shaku_%i", indx+1
 	gSshinji[indx]			sprintf	"shinji_%i", indx+1
 	gSshinobi[indx]			sprintf	"shinobi_%i", indx+1
@@ -296,7 +291,6 @@ until	indx == ginchnls do
 	gSsunij[indx]			sprintf	"sunij_%i", indx+1
 	gStape[indx]			sprintf	"tape_%i", indx+1
 	gStension[indx]			sprintf	"tension_%i", indx+1
-	gStimp[indx]			sprintf	"timp_%i", indx+1
 	gStoomuchalone[indx]			sprintf	"toomuchalone_%i", indx+1
 	gStoy[indx]			sprintf	"toy_%i", indx+1
 	gStrans[indx]			sprintf	"trans_%i", indx+1

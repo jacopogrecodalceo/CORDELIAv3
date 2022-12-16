@@ -10,9 +10,9 @@ jex: "10", 1
 
 
 jex: "10", 1
-	@trans.flingj(gkbeatms*5, .75)
+	@trans
 	gkbeats*12
-	$fff
+	$ff
 	gispina
 	cpstun($once(1, 2), 69+$once(0, 1)-12, gi11_10ET)
 

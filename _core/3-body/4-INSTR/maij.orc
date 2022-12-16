@@ -1,5 +1,7 @@
 gimaij_indx	init 1
 
+
+
 	instr maij
 
 Sinstr		init "maij_instr"
@@ -23,10 +25,11 @@ if gimaij_indx >= ilenharm then
 	gimaij_indx = 1
 endif
 
-
 	turnoff
 
 	endin
+
+
 
 	instr maij_instr
 
